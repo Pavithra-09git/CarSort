@@ -87,13 +87,16 @@ const Home = () => {
       return;
     }
 
-    const filtered = shops.map((shop) => {
+    const filtered = shops
+      .map((shop) => {
         const product = shop.products.find(
           (p) => p.name.toLowerCase() === search.toLowerCase().trim()
         );
         if (product) return { ...shop, product };
         return null;
-      }).filter(Boolean).sort((a, b) => b.product.storePaidAmount - a.product.storePaidAmount);
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.product.storePaidAmount - a.product.storePaidAmount);
 
     setResults(filtered);
   };

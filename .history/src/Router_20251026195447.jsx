@@ -4,7 +4,7 @@ import App from './App';
 import Home from './assets/Component/Home';
 import CardDetailPage from './assets/Component/CardDetailPage';
 
- export const router = createBrowserRouter([
+ exportconst router = createBrowserRouter([
   {
     path: '/',
     element: <App />,

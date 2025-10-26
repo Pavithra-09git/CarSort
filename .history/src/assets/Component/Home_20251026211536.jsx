@@ -93,7 +93,8 @@ const Home = () => {
         );
         if (product) return { ...shop, product };
         return null;
-      }).filter(Boolean).sort((a, b) => b.product.storePaidAmount - a.product.storePaidAmount);
+      }).filter(Boolean)
+    .sort((a, b) => b.product.storePaidAmount - a.product.storePaidAmount);
 
     setResults(filtered);
   };

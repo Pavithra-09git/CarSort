@@ -73,7 +73,7 @@ const Card = ({ shop }) => {
           <strong>Products:</strong>{" "}
           {shop.products.map((p, index) => (
             <span key={p.name}>
-              {p.name}{index !== shop.products.length - 1 ? ', ' : '.'}
+              {p.name}{index !== shop.products.length - 1 ? ', ' : ''}
             </span>
           ))}
         </p>

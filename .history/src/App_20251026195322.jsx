@@ -5,6 +5,7 @@ import './App.css'
 function App() {
   return (
     <div>
+      {/* You can add a header here if needed */}
       <Outlet /> 
     </div>
   );
