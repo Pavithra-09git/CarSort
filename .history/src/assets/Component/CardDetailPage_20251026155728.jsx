@@ -1,0 +1,20 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { shops } from '../../data';
+
+const CardDetailPage = () => {
+  const { id } = useParams();
+  const shop = shops.find((s) => s.id === Number(id));
+
+  if (!shop) return <p>Shop not found</p>;
+
+  return (
+    <div className="card-detail-page">
+      <h1>{shop.name}</h1>
+      <p><strong>Location:</strong> {shop.location}</p>
+      <p><strong>Products:</strong> {shop.products.join(", ")}</p>
+    </div>
+  );
+};
+
+export default CardDetailPage;

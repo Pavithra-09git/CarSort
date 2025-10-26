@@ -1,0 +1,21 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Card = ({ shop, results }) => {
+  return (
+    <Link to={`shop/${shop.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <div className="card">
+        <h2>{shop.name}</h2>
+        <p><strong>Location:</strong> {shop.location}</p>
+        {results ? (
+          <p><strong>Product:</strong> {shop.product}</p>
+        ) : (
+          <p><strong>Products:</strong> {shop.products.join(", ")}</p>
+        )}
+      </div>
+    </Link>
+  );
+};
+
+export default Card;
+
